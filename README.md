@@ -1,3 +1,5 @@
+# [Closest and Smallest](https://www.codewars.com/kata/5868b2de442e3fb2bb000119)
+
 Input
 
 - a string `strng` of n positive numbers (n = 0 or n >= 2)
