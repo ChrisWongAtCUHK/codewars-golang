@@ -1,23 +1,16 @@
 package kata
 
-// count the number of bit '1'
-func countBit(n int) int {
-	cnt := 1
-	for n > 1 {
-		if n % 2 == 1 {
-			cnt += 1
-		}
-		n = n / 2
-	}
-	return cnt
-}
+// AvramenkoArtem
+import (
+	"strconv"
+	"strings"
+)
 
 func NextHigher(n int) int {
-	bitCnt := countBit(n)
-	n += 1
-
-	for bitCnt != countBit(n) {
-		n += 1
+	for i := n + 1; i > 0; i++ {
+		if strings.Count(strconv.FormatInt(int64(n), 2), "1") == strings.Count(strconv.FormatInt(int64(i), 2), "1") {
+			return i
+		}
 	}
-	return n
+	return 0
 }
